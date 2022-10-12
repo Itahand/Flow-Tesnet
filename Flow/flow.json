@@ -1,0 +1,41 @@
+{
+	"contracts": {
+		"BlazinglyFast": "./cadence/contracts/BlazinglyFast.cdc",
+		"NonFungibleToken": {
+			"source": "./cadence/contracts/NonFungibleToken.cdc",
+			"aliases": {
+				"testnet": "0x631e88ae7f1d7c20"
+			}
+		}
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "43e2ab878ee754dac17434da83bd53ce11dee35115b1e2e5478f7906a9cef0e2"
+		},
+		"testnet-account": {
+			"address": "0x285ca2dc98ed5119",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "4ebb41b0577c04bb6dba2bef6b45bf7235e0eb056abf51eebc64a3d39efdef0c"
+			}
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"testnet-account": [
+				"BlazinglyFast"
+			]
+		}
+	}
+
+}
